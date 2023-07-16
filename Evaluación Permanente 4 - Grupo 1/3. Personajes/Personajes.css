@@ -1,0 +1,447 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+/*Header*/
+.header {
+    background-color: #272727;
+    color: #fff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+.menu {
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+}
+.menu a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.menu a i {
+    font-size: 30px; /* Tamaño de los iconos */
+}
+.menu a span {
+    margin-top: 5px;
+}
+.menu a:hover i {
+    transform: scale(1.2);
+    color: #C4051F;
+}
+.menu a:hover span {
+    color: #C4051F;
+    transform: scale(1.2);
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+.btns {
+    /* agregado para responsive  */
+    width: auto;
+    height: auto;
+    display: flex;
+  }
+.search-bar input[type="text"] {
+    padding: 10px 5px 5px 5px;
+    margin: 9px 9px 0px 0px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    height: 55px;
+    width: 300px;
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    vertical-align: middle;
+}
+
+/*Body*/
+main{
+    width: 90%;
+    background-color: #F7F7F7;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+/*Título*/
+.imghello {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 30%; /* Proporción de aspecto 16:9 (1080/1920) */
+    background-color: black;
+    overflow: hidden;
+} 
+#imgmain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0.5); /* Aplica el efecto de oscurecimiento */
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f7f7f780;
+    font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Personajes Menú*/
+#permenu{
+    display: flex;
+    font-family: 'Bebas Neue', sans-serif;
+    justify-content: space-between;
+}
+h1{
+    color: #3A3635;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+    justify-content: left;
+    margin: 30px;
+}
+#permenuor{
+    display: flex;
+}
+#permenub{
+    display: flex;
+}
+#az{
+    color: #8C0D1E; font-weight: bolder;
+    border-bottom: 2px solid #8C0D1E;
+}
+#mcu{
+    color: #3A3635; font-weight: bold; 
+}
+#mcu:hover{
+    border-bottom: 2px solid #3A3635;
+}
+
+/*Personajes Cuadro*/
+#percuad{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-family: 'News Cycle', sans-serif;
+} 
+.image-container {
+    width: 220px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    margin-left: 11px;
+    margin-right: 11px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+.image-container img{
+    width: 100%;
+    height: auto;
+}
+.image-container:hover{
+    border: 1px solid #c4c4c4;
+    transform: scale(1.05);
+}
+.image-title{
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    color: #272727;
+    transition: color 0.3s;
+}
+.image-container:hover .image-title{
+    color: #1F4F92;
+}
+.image-subt{
+    text-align: center;
+    font-size: 18px;
+    color: #272727;
+    transition: color 0.3s;
+}
+.image-container:hover .image-subt{
+    color: #1F4F92;
+}
+.avtxt{
+    line-height: 1.0
+}
+
+/*Personaje Info*/
+.again{
+    margin-left: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #1D3250;
+}
+.again:hover{
+    color: #1F4F92;
+    border-bottom: 2px solid #1F4F92;
+}
+#fin{
+    margin-left: 40px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #1D3250;
+}
+#fin:hover{
+    color: #1F4F92;
+    border-bottom: 2px solid #1F4F92;
+}
+
+.vic{
+    width: 200px;
+    height:  266.67px;
+    
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+    background-color: #272727;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.division {
+    flex: 1 1 0;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #F7F7F7;
+    text-align: justify;
+}
+.division img {
+    width: 150px;
+}
+.division p {
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 15px;
+    font-family: 'News Cycle', sans-serif;
+}
+h4{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+    color: #F7F7F7;
+}
+#foottxt{
+    font-family: 'News Cycle', sans-serif;
+    font-size: 15px;
+    line-height: 1.2
+}
+.division2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.division2 a{
+    color: #F7F7F7;
+    padding: 5px;
+    font-family: 'News Cycle', sans-serif;
+    font-weight: bold;
+}
+.division2 a:hover {
+    color: #1F4F92;
+    font-size: 16px;
+}
+i{
+    font-size: 50px;
+    color: #F7F7F7;
+}
+#iconfooter:hover{
+    color: #C4051F;
+    font-size: 51px;
+}
+.division3 {
+    display: grid;
+    align-content: space-evenly;
+}
+ i:hover{
+    color: #C4051F;
+}
+.division4{
+    grid-column: 1/4;
+    font-family: 'News Cycle', sans-serif;
+    color: #8a8a8a;
+}
+  
+
+
+/*Personajes Texto
+fonts:
+h: font-family: 'Bebas Neue', sans-serif;
+h2: font-family: 'News Cycle', sans-serif;
+b: font-family: 'Comic Neue', cursive;
+hulk: font-family: 'Bangers', cursive;
+
+
+.image-title {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 10px;
+background-color: rgba(0, 0, 0, 0.7);
+color: #fff;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+}
+*/
+
+
+/* RESPONSIVE PARA 480px ------------------------------------------------------------------*/
+@media (max-width: 480px) {
+
+    /*header*/
+    .header {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+      }
+      .search-bar input[type="text"] {
+        height: 35px;
+        width: 250px;
+        font-size: 25px;
+      }
+      .btns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .menu a i {
+        font-size: 20px; /* Tamaño de los iconos */
+      }
+      .menu a span {
+        margin-top: 10px;
+      }
+      #primcont{
+          display: flex;
+          flex-direction: column;
+          
+        }
+    #permenu{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #permenu h1{
+        font-size: 20px;
+    }
+
+    /*Cuadro Personajes*/ 
+    .image-container {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+        justify-content: center;
+    }
+    #percuad img{
+        margin: 5px;
+        width: 70px;
+        object-fit: contain;
+
+    }
+    .avpj{
+        width: 300px;
+        display: flex;
+        align-content: center;
+    }
+    .img-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1; /* Ocupar el espacio restante */
+        align-items: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    .image-title, .image-subt {
+        text-align: center;
+    }
+    #percuad{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: start;
+        font-family: 'News Cycle', sans-serif;
+    }
+   /*Informacion Personajes*/ 
+    .avtxt{
+        display: flex;
+        flex-direction: column;
+    }
+    .avtxt a{
+        margin-bottom: 20px;
+    }
+
+    /*Header*/
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*Footer*/
+    footer {
+        display: flex;
+        flex-direction: column;
+      }
+
+
+
+}

@@ -1,0 +1,513 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+/*Header*/
+.header {
+    background-color: #272727;
+    color: #fff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+.menu {
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+}
+.menu a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.menu a i {
+    font-size: 30px; /* Tamaño de los iconos */
+}
+.menu a span {
+    margin-top: 5px;
+}
+.menu a:hover i {
+    transform: scale(1.2);
+    color: #C4051F;
+}
+.menu a:hover span {
+    color: #C4051F;
+    transform: scale(1.2);
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+.btns {
+    /* agregado para responsive  */
+    width: auto;
+    height: auto;
+    display: flex;
+  }
+.search-bar input[type="text"] {
+    padding: 10px 5px 5px 5px;
+    margin: 9px 9px 0px 0px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    height: 55px;
+    width: 300px;
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    vertical-align: middle;
+}
+.vic {
+    width: 200px;
+    height: 75px;
+    vertical-align: middle;
+  }
+
+/*Body*/
+main{
+    width: 90%;
+    background-color: #F7F7F7;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+/*Título*/
+.imghello {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 30%; /* Proporción de aspecto 16:9 (1080/1920) */
+    background-color: black;
+    overflow: hidden;
+} 
+#imgmain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5); /* Aplica el efecto de oscurecimiento */
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f7f7f780;
+    font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Intro*/
+h1{
+    color: #3A3635;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+    margin: 30px;
+}
+h2{
+    padding: 10px 30px;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'News Cycle', sans-serif;
+}
+.creatxt{
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    margin: 0px 30px;
+    text-align: justify;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.creatxt a{
+    margin: 10 0pxpx;
+    color: #C4051F;
+    
+}
+.creatxt a:hover{
+    color: #1F4F92;
+}
+.comtxt{
+    display: flex;
+    align-items: start
+}
+.comtxt p{
+    flex: 1;
+    margin: 0px 30px 30px 30px;
+    text-align: justify;
+    font-family: 'Comic Neue', cursive; font-size: 18px;
+    line-height: 1.0
+}
+.autor{
+    width: 200px; height: 266.67px;margin-left: 20px; margin-right: 10px;
+    
+}
+/*Personajes Menú*/
+.commenu{
+    display: flex;
+    justify-content: space-between;
+}
+.arcottl{
+    color: #3A3635;
+    font-family: 'Bebas Neue', sans-serif;
+    justify-content: left;
+    padding: 20px 10px;
+}
+.commenuor{
+    display: flex;
+    align-items: center;
+}
+.commenua{
+    padding: 20px 10px;
+    color: #3A3635;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+.commenub{
+    display: flex;
+    padding: 20px 0px;
+    margin-right: 10px;
+    font-size: 22px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.az{
+    padding:5px;
+    margin: 2px;
+    color: #8C0D1E;
+    font-weight: bolder;
+    border-bottom: 2px solid #8C0D1E;
+}
+.mcu{
+    padding: 5px;
+    margin: 2px;
+    color: #3A3635;
+    font-weight: bold; 
+}
+.mcu:hover{
+    border-bottom: 2px solid #3A3635;
+}
+
+/*Comics Cuadro*/
+#contenedor-gris {
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 10px;
+}
+.comcuad{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'News Cycle', sans-serif;
+} 
+.image-container {
+    width: 195px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    margin-left: 11px;
+    margin-right: 11px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+.image-container img{
+    width: 100%;
+    height: auto;
+}
+.image-container:hover{
+    border: 1px solid #c4c4c4;
+    transform: scale(1.05);
+}
+.image-title{
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    color: #272727;
+    transition: color 0.3s;
+}
+.image-container:hover .image-title{
+    color: #1F4F92;
+}
+.image-subt{
+    text-align: center;
+    font-size: 18px;
+    color: #272727;
+    transition: color 0.3s;
+}
+.image-container:hover .image-subt{
+    color: #1F4F92;
+}
+.combot{
+    display: flex;
+    justify-content: space-between;
+}
+.direccionales{
+    margin: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #1D3250;
+}
+.direccionales:hover{
+    color: #1F4F92;
+    border-bottom: 2px solid #1F4F92;
+}
+
+/*Creadores*/
+#stanlee{
+    margin-bottom: 30px;
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+    background-color: #272727;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.division {
+    flex: 1 1 0;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #F7F7F7;
+    text-align: justify;
+}
+.division img {
+    width: 150px;
+}
+.division p {
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 15px;
+    font-family: 'News Cycle', sans-serif;
+}
+h4{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+    color: #F7F7F7;
+}
+#foottxt{
+    font-family: 'News Cycle', sans-serif;
+    font-size: 15px;
+    line-height: 1.2
+}
+.division2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.division2 a{
+    color: #F7F7F7;
+    padding: 5px;
+    font-family: 'News Cycle', sans-serif;
+    font-weight: bold;
+}
+.division2 a:hover {
+    color: #1F4F92;
+    font-size: 16px;
+}
+i{
+    font-size: 50px;
+    color: #F7F7F7;
+}
+#iconfooter:hover{
+    color: #C4051F;
+    font-size: 51px;
+}
+.division3 {
+    display: grid;
+    align-content: space-evenly;
+}
+ i:hover{
+    color: #C4051F;
+}
+.division4{
+    grid-column: 1/4;
+    font-family: 'News Cycle', sans-serif;
+    color: #8a8a8a;
+}
+
+
+
+/*Personajes Texto
+fonts:
+h: font-family: 'Bebas Neue', sans-serif;
+h2: font-family: 'News Cycle', sans-serif;
+b: font-family: 'Comic Neue', cursive;
+hulk: font-family: 'Bangers', cursive;
+
+
+.image-title {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 10px;
+background-color: rgba(0, 0, 0, 0.7);
+color: #fff;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+}
+*/
+
+
+/* RESPONSIVE PARA 480px ------------------------------------------------------------------*/
+@media (max-width: 480px) {
+  
+    /* header  */
+    .header {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .search-bar input[type="text"] {
+      height: 35px;
+      width: 250px;
+      font-size: 25px;
+    }
+    .btns {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .menu a i {
+      font-size: 20px; /* Tamaño de los iconos */
+    }
+    .menu a span {
+      margin-top: 10px;
+    }
+    #primcont{
+        display: flex;
+        flex-direction: column;
+        
+      }
+  /*------------main y aside------*/
+  
+    #noti h1{
+        font-size: 30px;
+    }
+    #noti h5{
+        margin: 10px 10px 20px 15px;
+        width: 400px;
+        text-align: justify;
+        font-family: "News Cycle", sans-serif;
+        font-size: 20px;
+        color: #272727;
+        line-height: 1;
+    }
+    #noti h6{
+        margin: 10px 10px 20px 15px ;
+        width: 400px;
+        text-align: justify;
+        font-family: 'News Cycle', sans-serif; 
+        font-size: 20px; 
+        color: #272727; 
+        line-height: 1.0"
+    }
+    #h6-across{
+        margin: 20px 30px; 
+        text-align: justify;
+        font-family: 'News Cycle', sans-serif; 
+        font-size: 25px; 
+        color: #272727; 
+        line-height: 1.0;
+        
+    }
+    
+    #noti p {
+        flex: 1;
+        width: 400px;
+        margin: 10px 10px 30px 15px;
+        text-align: justify;
+        font-family: "Comic Neue", cursive;
+        font-size: 18px;
+        line-height: 1;
+      }
+      .spiderverse-png{
+        width: 400px; 
+        height: auto; 
+        margin: 20px 15px;
+    }
+    .spiderverse1-png{
+        width: 400px;
+         height: auto; 
+         margin: 20px 0px;
+    }
+    #youtube-spider{
+        overflow:hidden; 
+        margin-left: 15px; 
+        margin-right: 10px; 
+        height: 250px; 
+        width: 400px; position: relative;
+    }
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+      }  
+
+      .commenuor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center ;
+        
+    }
+    .commenua{
+        margin-bottom: -30px;
+    }
+
+    .comtxt{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-container{
+        width: 150px;
+    }    
+}
